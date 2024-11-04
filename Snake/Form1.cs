@@ -20,7 +20,7 @@ namespace Snake
             InitializeComponent();
             new Settings();
         }
-        List<Circles> Snake=new List<Circles>(); //Tạo list chứa các Circles
+        List<Circles> Snake = new List<Circles>(); //Tạo list chứa các Circles
         private Circles food = new Circles(); //Tạo biến food
         int maxWidth; //Chiều rộng tối đa của map
         int maxHeight; //Chiều dài tối đa của map
