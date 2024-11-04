@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +28,7 @@ namespace Snake
         int highScore; //Điểm kỉ lục
         Random rand = new Random();
         bool goLeft, goRight, goDown, goUp; //các biến bool mũi tên
+        Rectangle rec = new Rectangle(12*16, 14*16, 64, 64); //tạo thử 1 chướng ngại hình vuông
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -72,6 +73,7 @@ namespace Snake
         }
         private void GameTimerEvent(object sender, EventArgs e)
         {
+
             if (goLeft)
             {
                 Settings.directions = "left";
@@ -130,6 +132,8 @@ namespace Snake
                     {
                         EatFood();
                     }
+                    //Trường hợp chạm vào chướng ngại
+                    if(ChamChuongNgai(rec, Snake[0])) GameOver();
                     //Trường hợp chạm vào thân
                     for (int j = 1; j < Snake.Count; j++)
                     {
@@ -154,7 +158,8 @@ namespace Snake
         private void pictureBox1_Paint(object sender, PaintEventArgs e) //Vẽ trên picturebox
         {
             Graphics canvas = e.Graphics;
-            Brush snakeColour; 
+            Brush snakeColour;
+            canvas.FillRectangle(Brushes.Green, rec);
             for (int i = 0; i < Snake.Count; i++)
             {
                 if (i == 0)
@@ -165,10 +170,11 @@ namespace Snake
                 {
                     snakeColour = Brushes.Black; //thân rắn màu đen cho nổi
                 }
+                
                 canvas.FillEllipse(snakeColour, new Rectangle 
                     (
-                    Snake[i].X * Settings.Width,
-                    Snake[i].Y * Settings.Height,
+                    Snake[i].X*Settings.Height ,
+                    Snake[i].Y*Settings.Height ,
                     Settings.Width, Settings.Height
                     )); //Vẽ rắn là những hình Ellipse nối đuôi nhau, sau thay bằng Image khác
             }
@@ -202,9 +208,9 @@ namespace Snake
         }
         private void RestartGame()
         {
-            //Tính toán max dài và rộng của picturebox
-            maxWidth = pictureBox1.Width / Settings.Width - 1;
-            maxHeight = pictureBox1.Height / Settings.Height - 1;
+            //Tính toán max dài và rộng của picturebox/sett.height và sett.width
+            maxWidth = pictureBox1.Width / Settings.Width ;
+            maxHeight = pictureBox1.Height / Settings.Height ;
             Snake.Clear(); //Xóa hết dữ liệu của snake cũ
             startButton.Enabled = false; 
             score = 0;
@@ -223,6 +229,24 @@ namespace Snake
         {
             startButton.Enabled = true;
             timer1.Stop();
+        }
+
+        private bool ChamChuongNgai(Rectangle a, Circles c) //Các trường hợp chạm chướng ngại ở các vị trí, sau này sẽ ghi rõ vào báo cáo
+        {
+            int x = a.X;
+            int y = a.Y;
+            int h = a.Height;
+            int w = a.Width;
+            if (c.X* Settings.Width <= x && c.Y*Settings.Height <= y)
+                if (x < c.X* Settings.Width + Settings.Width && c.X*Settings.Width + Settings.Width <= x + w && y < c.Y*Settings.Height + Settings.Height && c.Y*Settings.Height + Settings.Height <= y + h) return true;
+            if (c.X*Settings.Width > x && c.Y*Settings.Height <= y)
+                if (x < c.X* Settings.Width && c.X* Settings.Width < x + w && y < c.Y*Settings.Height + Settings.Height && c.Y*Settings.Height + Settings.Height <= y + h) return true;
+            if (c.X* Settings.Width <= x && c.Y*Settings.Height > y)
+                if (x < c.X* Settings.Width + Settings.Width && c.X*Settings.Width + Settings.Height <= x + w && y < c.Y*Settings.Height && c.Y*Settings.Height < y + h) return true;
+            if (c.X*Settings.Width > x && c.Y*Settings.Height > y)
+                if (x < c.X* Settings.Width && c.X* Settings.Width < x + w && y < c.Y*Settings.Height && c.Y*Settings.Height < y + h) return true;
+            return false;
+
         }
     }
 }
