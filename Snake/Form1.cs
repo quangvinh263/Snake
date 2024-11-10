@@ -11,10 +11,10 @@ using System.Drawing.Imaging; // add this for the JPG compressor
 
 namespace Snake
 {
-    
+
     public partial class Form1 : Form
     {
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Snake
         int highScore; //Điểm kỉ lục
         Random rand = new Random();
         bool goLeft, goRight, goDown, goUp; //các biến bool mũi tên
-        Rectangle rec = new Rectangle(12*16, 14*16, 64, 64); //tạo thử 1 chướng ngại hình vuông
+        Rectangle rec = new Rectangle(12 * 16, 14 * 16, 64, 64); //tạo thử 1 chướng ngại hình vuông
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -98,7 +98,7 @@ namespace Snake
                     switch (Settings.directions) //Các trường hợp directions, vẽ trục tọa độ ta sẽ rõ
                     {
                         case "left":
-                            Snake[i].X--; 
+                            Snake[i].X--;
                             break;
                         case "right":
                             Snake[i].X++;
@@ -133,7 +133,7 @@ namespace Snake
                         EatFood();
                     }
                     //Trường hợp chạm vào chướng ngại
-                    if(ChamChuongNgai(rec, Snake[0])) GameOver();
+                    if (ChamChuongNgai(rec, Snake[0])) GameOver();
                     //Trường hợp chạm vào thân
                     for (int j = 1; j < Snake.Count; j++)
                     {
@@ -145,7 +145,7 @@ namespace Snake
                 }
                 else //Phần tử sau bằng phần tử trước, lấy tọa độ mới
                 {
-                    Snake[i].X = Snake[i - 1].X; 
+                    Snake[i].X = Snake[i - 1].X;
                     Snake[i].Y = Snake[i - 1].Y;
                 }
             }
@@ -170,11 +170,11 @@ namespace Snake
                 {
                     snakeColour = Brushes.Black; //thân rắn màu đen cho nổi
                 }
-                
-                canvas.FillEllipse(snakeColour, new Rectangle 
+
+                canvas.FillEllipse(snakeColour, new Rectangle
                     (
-                    Snake[i].X*Settings.Height ,
-                    Snake[i].Y*Settings.Height ,
+                    Snake[i].X * Settings.Height,
+                    Snake[i].Y * Settings.Height,
                     Settings.Width, Settings.Height
                     )); //Vẽ rắn là những hình Ellipse nối đuôi nhau, sau thay bằng Image khác
             }
@@ -193,7 +193,7 @@ namespace Snake
             {
                 if (food.X == Snake[i].X && food.Y == Snake[i].Y) { k = false; break; }
             }
-            if(!k) AppearFood();
+            if (!k) AppearFood();
         }
         private void EatFood() //Rắn ăn 1 quả sẽ dài thêm 1 nấc => list snake sẽ add 1 phần tử mới có tọa độ bằng tọa độ phần tử cuối của list cũ
         {
@@ -209,14 +209,14 @@ namespace Snake
         private void RestartGame()
         {
             //Tính toán max dài và rộng của picturebox/sett.height và sett.width
-            maxWidth = pictureBox1.Width / Settings.Width ;
-            maxHeight = pictureBox1.Height / Settings.Height ;
+            maxWidth = pictureBox1.Width / Settings.Width;
+            maxHeight = pictureBox1.Height / Settings.Height;
             Snake.Clear(); //Xóa hết dữ liệu của snake cũ
-            startButton.Enabled = false; 
+            startButton.Enabled = false;
             score = 0;
             //Tạo 1 snake mới gồm 1 đầu và 1 nấc thân
             Circles head = new Circles { X = 10, Y = 5 };
-            Snake.Add(head); 
+            Snake.Add(head);
             for (int i = 0; i < 1; i++)
             {
                 Circles body = new Circles();
@@ -237,14 +237,14 @@ namespace Snake
             int y = a.Y;
             int h = a.Height;
             int w = a.Width;
-            if (c.X* Settings.Width <= x && c.Y*Settings.Height <= y)
-                if (x < c.X* Settings.Width + Settings.Width && c.X*Settings.Width + Settings.Width <= x + w && y < c.Y*Settings.Height + Settings.Height && c.Y*Settings.Height + Settings.Height <= y + h) return true;
-            if (c.X*Settings.Width > x && c.Y*Settings.Height <= y)
-                if (x < c.X* Settings.Width && c.X* Settings.Width < x + w && y < c.Y*Settings.Height + Settings.Height && c.Y*Settings.Height + Settings.Height <= y + h) return true;
-            if (c.X* Settings.Width <= x && c.Y*Settings.Height > y)
-                if (x < c.X* Settings.Width + Settings.Width && c.X*Settings.Width + Settings.Height <= x + w && y < c.Y*Settings.Height && c.Y*Settings.Height < y + h) return true;
-            if (c.X*Settings.Width > x && c.Y*Settings.Height > y)
-                if (x < c.X* Settings.Width && c.X* Settings.Width < x + w && y < c.Y*Settings.Height && c.Y*Settings.Height < y + h) return true;
+            if (c.X * Settings.Width <= x && c.Y * Settings.Height <= y)
+                if (x < c.X * Settings.Width + Settings.Width && c.X * Settings.Width + Settings.Width <= x + w && y < c.Y * Settings.Height + Settings.Height && c.Y * Settings.Height + Settings.Height <= y + h) return true;
+            if (c.X * Settings.Width > x && c.Y * Settings.Height <= y)
+                if (x < c.X * Settings.Width && c.X * Settings.Width < x + w && y < c.Y * Settings.Height + Settings.Height && c.Y * Settings.Height + Settings.Height <= y + h) return true;
+            if (c.X * Settings.Width <= x && c.Y * Settings.Height > y)
+                if (x < c.X * Settings.Width + Settings.Width && c.X * Settings.Width + Settings.Height <= x + w && y < c.Y * Settings.Height && c.Y * Settings.Height < y + h) return true;
+            if (c.X * Settings.Width > x && c.Y * Settings.Height > y)
+                if (x < c.X * Settings.Width && c.X * Settings.Width < x + w && y < c.Y * Settings.Height && c.Y * Settings.Height < y + h) return true;
             return false;
 
         }
