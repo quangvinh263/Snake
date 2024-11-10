@@ -25,18 +25,30 @@ namespace Snake
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            textBox1.BackColor = Color.GreenYellow;
-            panel1.BackColor = Color.GreenYellow;
+            textBox1.BackColor = Color.LightGreen;
+            panel1.BackColor = Color.LightGreen;
             panel2.BackColor = SystemColors.Control;
             textBox2.BackColor = SystemColors.Control;
         }
 
         private void textBox2_Click(object sender, EventArgs e)
         {
-            textBox2.BackColor = Color.GreenYellow;
-            panel2.BackColor = Color.GreenYellow;
+            textBox2.BackColor = Color.LightGreen;
+            panel2.BackColor = Color.LightGreen;
             panel1.BackColor = SystemColors.Control;
             textBox1.BackColor = SystemColors.Control;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Register().Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new ForgotPassword().Show();
+            this.Hide();
         }
     }
 }

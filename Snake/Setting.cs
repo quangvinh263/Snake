@@ -15,14 +15,11 @@ namespace Snake
 
         public string TK;
         public string MK;
-        public string LV;
+        public string Email;
         public string Point;
 
         public SoundPlayer Menu;
         public SoundPlayer Eat;
         public SoundPlayer Music;
-        public Setting()
-        {
-        }
     }
 }
