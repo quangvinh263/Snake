@@ -43,7 +43,7 @@
             this.label1.ForeColor = System.Drawing.Color.LightGreen;
             this.label1.Location = new System.Drawing.Point(28, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 39);
+            this.label1.Size = new System.Drawing.Size(190, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Get started";
             // 
@@ -104,8 +104,7 @@
             // 
             // ForgotPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(368, 361);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.butExit);

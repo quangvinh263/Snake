@@ -85,7 +85,6 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Setting.cs" />
-    <Compile Include="Class3.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
