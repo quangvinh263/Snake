@@ -15,11 +15,37 @@ namespace Snake
         public ForgotPassword()
         {
             InitializeComponent();
+            label3.Text = "";
         }
+
+        Modify modify = new Modify();
 
         private void butExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string email = txtBoxEmail.Text;
+            if (email.Trim() == "") // check email có trống không
+            {
+                MessageBox.Show("Vui lòng nhập email đã đăng ký:");
+            }
+            else
+            {
+                string query = "SELECT * FROM TaiKhoan WHERE Email = '" + email + "'";
+                if (modify.TaiKhoans(query).Count != 0)
+                {
+                    label3.ForeColor = Color.Green;
+                    label3.Text = "Mật khẩu của bạn là: " + modify.TaiKhoans(query)[0].MK;
+                }
+                else
+                {
+                    label3.ForeColor = Color.Red;
+                    label3.Text = "Email này chưa được đăng ký!";
+                }
+            }
         }
     }
 }

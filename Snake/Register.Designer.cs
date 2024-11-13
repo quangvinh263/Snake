@@ -37,7 +37,7 @@
             this.txtConfirm = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.butRegister = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btDelete = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.butExit = new System.Windows.Forms.Button();
@@ -143,19 +143,21 @@
             this.butRegister.TabIndex = 8;
             this.butRegister.Text = "ĐĂNG KÝ";
             this.butRegister.UseVisualStyleBackColor = false;
+            this.butRegister.Click += new System.EventHandler(this.butRegister_Click);
             // 
-            // button1
+            // btDelete
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightGreen;
-            this.button1.Location = new System.Drawing.Point(34, 533);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(296, 54);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "XÓA";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btDelete.BackColor = System.Drawing.Color.White;
+            this.btDelete.FlatAppearance.BorderSize = 0;
+            this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDelete.ForeColor = System.Drawing.Color.LightGreen;
+            this.btDelete.Location = new System.Drawing.Point(34, 533);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(296, 54);
+            this.btDelete.TabIndex = 9;
+            this.btDelete.Text = "XÓA";
+            this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // label5
             // 
@@ -221,7 +223,7 @@
             this.Controls.Add(this.butExit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btDelete);
             this.Controls.Add(this.butRegister);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtConfirm);
@@ -252,7 +254,7 @@
         private System.Windows.Forms.TextBox txtConfirm;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button butRegister;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button butExit;

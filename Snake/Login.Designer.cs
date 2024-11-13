@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxTK = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxMK = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -74,24 +74,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtBoxTK);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(445, 285);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(356, 40);
             this.panel1.TabIndex = 3;
             // 
-            // textBox1
+            // txtBoxTK
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.HideSelection = false;
-            this.textBox1.Location = new System.Drawing.Point(48, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(304, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.txtBoxTK.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTK.HideSelection = false;
+            this.txtBoxTK.Location = new System.Drawing.Point(48, 10);
+            this.txtBoxTK.Name = "txtBoxTK";
+            this.txtBoxTK.Size = new System.Drawing.Size(304, 20);
+            this.txtBoxTK.TabIndex = 1;
+            this.txtBoxTK.Click += new System.EventHandler(this.textBox1_Click);
             // 
             // pictureBox2
             // 
@@ -106,24 +106,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtBoxMK);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Location = new System.Drawing.Point(445, 351);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(356, 40);
             this.panel2.TabIndex = 4;
             // 
-            // textBox2
+            // txtBoxMK
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(49, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(304, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.UseSystemPasswordChar = true;
-            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.txtBoxMK.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMK.Location = new System.Drawing.Point(49, 12);
+            this.txtBoxMK.Name = "txtBoxMK";
+            this.txtBoxMK.Size = new System.Drawing.Size(304, 20);
+            this.txtBoxMK.TabIndex = 1;
+            this.txtBoxMK.UseSystemPasswordChar = true;
+            this.txtBoxMK.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // pictureBox3
             // 
@@ -144,6 +144,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Đăng nhập";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -216,8 +217,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxTK;
+        private System.Windows.Forms.TextBox txtBoxMK;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
