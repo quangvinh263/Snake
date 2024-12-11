@@ -75,10 +75,12 @@ namespace Snake
                 if (modify.TaiKhoans(query).Count != 0)
                 {
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Settings.Instance.TenTK = tenTK;
                     this.Hide();
                     Home home = new Home();
                     home.ShowDialog();
                     this.Close();
+                    
                 }
                 else
                 {

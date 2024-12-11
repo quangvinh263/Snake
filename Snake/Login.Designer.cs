@@ -51,11 +51,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGreen;
             this.label1.Location = new System.Drawing.Point(546, 212);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 38);
+            this.label1.Size = new System.Drawing.Size(196, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "ĐĂNG NHẬP";
             // 
@@ -85,11 +85,11 @@
             // 
             this.txtBoxTK.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTK.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxTK.HideSelection = false;
             this.txtBoxTK.Location = new System.Drawing.Point(48, 10);
             this.txtBoxTK.Name = "txtBoxTK";
-            this.txtBoxTK.Size = new System.Drawing.Size(304, 20);
+            this.txtBoxTK.Size = new System.Drawing.Size(304, 21);
             this.txtBoxTK.TabIndex = 1;
             this.txtBoxTK.Click += new System.EventHandler(this.textBox1_Click);
             // 
@@ -117,10 +117,10 @@
             // 
             this.txtBoxMK.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMK.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxMK.Location = new System.Drawing.Point(49, 12);
             this.txtBoxMK.Name = "txtBoxMK";
-            this.txtBoxMK.Size = new System.Drawing.Size(304, 20);
+            this.txtBoxMK.Size = new System.Drawing.Size(304, 21);
             this.txtBoxMK.TabIndex = 1;
             this.txtBoxMK.UseSystemPasswordChar = true;
             this.txtBoxMK.Click += new System.EventHandler(this.textBox2_Click);
@@ -137,20 +137,23 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.PaleGreen;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(596, 468);
+            this.button1.Location = new System.Drawing.Point(571, 472);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 41);
             this.button1.TabIndex = 5;
             this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(493, 411);
+            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(471, 416);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 37);
             this.button2.TabIndex = 6;
@@ -171,13 +174,15 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.PaleGreen;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(673, 416);
+            this.button3.Location = new System.Drawing.Point(662, 416);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 27);
+            this.button3.Size = new System.Drawing.Size(98, 37);
             this.button3.TabIndex = 7;
             this.button3.Text = "Đăng ký";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Login

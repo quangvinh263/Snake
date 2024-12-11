@@ -26,7 +26,9 @@ namespace Snake
         }
         private void butExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            new Login().ShowDialog();
+            this.Close();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -45,8 +47,10 @@ namespace Snake
 
         private void label6_Click(object sender, EventArgs e)
         {
-            new Login().Show();
-            this.Hide(); 
+            this.Hide();
+            new Login().ShowDialog();
+            this.Close();
+            
         }
 
         Modify modify = new Modify();
@@ -84,9 +88,12 @@ namespace Snake
             }
             try
             {
-                string query = "INSERT INTO TaiKhoan VALUES ('" + TenTK + "', '" + MatKhau + "', '" + Email + "', 0)";
+                string query = "INSERT INTO TaiKhoan VALUES ('" + TenTK + "', '" + MatKhau + "', '" + Email + "', 0, 0)";
                 modify.Command(query);
                 MessageBox.Show("Đăng ký thành công!");
+                this.Hide();
+                new Login().ShowDialog();
+                this.Close();
             }
             catch
             {

@@ -22,7 +22,9 @@ namespace Snake
 
         private void butExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           this.Hide();
+           new Login().ShowDialog();
+           this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

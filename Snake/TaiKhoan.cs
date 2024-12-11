@@ -11,20 +11,25 @@ namespace Snake
         private string TenTK;
         private string MatKhau;
         private string Email;
-        private long Point;
+        private int EasyPoint;
+        private int HardPoint;
 
         public TaiKhoan()
         {
+
         }
 
-        public TaiKhoan(string tenTK, string mK)
+        public TaiKhoan(string tenTK, string mK, int easyPoint, int hardPoint)
         {
             this.TenTK = tenTK;
             this.MatKhau = mK;
+            this.EasyPoint = easyPoint;
+            this.HardPoint = hardPoint;
         }
         public string tenTK { get => TenTK; set => TenTK = value; }
         public string MK { get => MatKhau; set => MatKhau = value; }
         public string email { get => Email; set => Email = value; }
-        public long point { get => Point; set => Point = value; }
+        public int easyPoint { get => EasyPoint; set => EasyPoint = value; }
+        public int hardPoint { get => HardPoint; set => HardPoint = value; }
     }
 }

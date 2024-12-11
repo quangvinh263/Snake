@@ -62,7 +62,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Database1DataSet.cs">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EasyMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EasyMap.Designer.cs">
+      <DependentUpon>EasyMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HardMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HardMap.Designer.cs">
+      <DependentUpon>HardMap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modify.cs" />
+    <Compile Include="Ranking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ranking.Designer.cs">
+      <DependentUpon>Ranking.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
@@ -97,8 +139,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Circle.cs" />
+    <EmbeddedResource Include="EasyMap.resx">
+      <DependentUpon>EasyMap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HardMap.resx">
+      <DependentUpon>HardMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -111,9 +162,45 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ranking.resx">
+      <DependentUpon>Ranking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsc">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet1.xss">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet2.xsc">
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet2.xss">
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,6 +225,38 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\891ee9a180d14aa4cb2f71100d7b3a987215d384.jpg" />
+    <None Include="Resources\ambient-game-67014.wav" />
+    <None Include="Resources\failure-drum-sound-effect-2-7184.wav" />
+    <None Include="Resources\eating-sound-effect-36186.wav" />
+    <None Include="Resources\grapes.png" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\strawberry.png" />
+    <None Include="Resources\orange.png" />
+    <None Include="Resources\peach.png" />
+    <None Include="Resources\kiwi.png" />
+    <None Include="Resources\Browser Games - Google Snake Game - Food.png" />
+    <None Include="Resources\logo200.png" />
+    <None Include="Resources\Home.bmp" />
+    <None Include="Resources\game-music-loop-7-145285.wav" />
+    <None Include="Resources\soundHome.bmp" />
+    <None Include="Resources\woodbox.jpg" />
+    <None Include="Resources\tail_up.png" />
+    <None Include="Resources\tail_right.png" />
+    <None Include="Resources\tail_left.png" />
+    <None Include="Resources\tail_down.png" />
+    <None Include="Resources\head_up.png" />
+    <None Include="Resources\head_right.png" />
+    <None Include="Resources\head_left.png" />
+    <None Include="Resources\head_down.png" />
+    <None Include="Resources\body_vertical.png" />
+    <None Include="Resources\body_topright.png" />
+    <None Include="Resources\body_topleft.png" />
+    <None Include="Resources\body_horizontal.png" />
+    <None Include="Resources\body_bottomright.png" />
+    <None Include="Resources\body_bottomleft.png" />
+    <None Include="Resources\apple.png" />
+    <None Include="Resources\10 Grass Texture Background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
