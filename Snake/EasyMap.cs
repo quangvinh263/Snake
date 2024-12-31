@@ -673,7 +673,7 @@ namespace Snake
             k = false;
             timer1.Stop();
             GameOver gameOver = new GameOver();
-            System.Threading.Thread.Sleep(700);
+            System.Threading.Thread.Sleep(1000);
             this.Hide();
             gameOver.ShowDialog();
             this.Close();

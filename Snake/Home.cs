@@ -34,7 +34,7 @@ namespace Snake
         {
             exitbtn.Parent = backpic;
             label1.Parent = backpic;
-            Settings.Instance.soundHome.Play();
+            Settings.Instance.soundHome.PlayLooping();
             pictureBox2.Image = Settings.Instance.food;
             
         }

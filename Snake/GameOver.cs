@@ -19,17 +19,24 @@ namespace Snake
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Settings.Instance.GameOver.Stop();
             this.Hide();
             if (Settings.Instance.GameMode == "Hard")
             {
                 HardMap hard = new HardMap();
                 hard.ShowDialog();
             }
+            else
+            {
+                EasyMap easy = new EasyMap();
+                easy.ShowDialog();
+            }
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Settings.Instance.GameOver.Stop();
             this.Hide();
             Home home = new Home();
             home.ShowDialog();
@@ -44,6 +51,11 @@ namespace Snake
         private void label2_Paint(object sender, PaintEventArgs e)
         {
             label2.Text = "Your Score: " + Settings.Instance.Score;
+        }
+
+        private void GameOver_Load(object sender, EventArgs e)
+        {
+            Settings.Instance.GameOver.PlayLooping();
         }
     }
 }

@@ -43,7 +43,7 @@
             this.label1.ForeColor = System.Drawing.Color.LightGreen;
             this.label1.Location = new System.Drawing.Point(28, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 41);
+            this.label1.Size = new System.Drawing.Size(206, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Get started";
             // 
@@ -61,10 +61,11 @@
             // txtBoxEmail
             // 
             this.txtBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(35, 145);
+            this.txtBoxEmail.Multiline = true;
             this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(299, 20);
+            this.txtBoxEmail.Size = new System.Drawing.Size(299, 25);
             this.txtBoxEmail.TabIndex = 2;
             // 
             // butExit

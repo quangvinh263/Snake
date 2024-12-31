@@ -36,7 +36,7 @@ namespace Snake
         public SoundPlayer soundHome = new SoundPlayer(Properties.Resources.soundHome);
         public SoundPlayer soundEat = new SoundPlayer(Properties.Resources.soundEat);
         public SoundPlayer soundHit = new SoundPlayer(Properties.Resources.soundHit);
-        public SoundPlayer soundDie = new SoundPlayer(Properties.Resources.soundHome);
+        public SoundPlayer GameOver = new SoundPlayer(Properties.Resources.GameOver);
         public Image food = Properties.Resources.apple;
         public static int Width { get; set; }
         public static int Height { get; set; }

@@ -225,6 +225,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\happy-relaxing-loop-275536.wav" />
     <None Include="Resources\891ee9a180d14aa4cb2f71100d7b3a987215d384.jpg" />
     <None Include="Resources\ambient-game-67014.wav" />
     <None Include="Resources\failure-drum-sound-effect-2-7184.wav" />

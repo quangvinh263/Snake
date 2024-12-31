@@ -63,29 +63,10 @@ namespace Snake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10_Grass_Texture_Background {
-            get {
-                object obj = ResourceManager.GetObject("_10_Grass_Texture_Background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _81d7d0d4ce05fddbc80ffa7b30a7fffe {
             get {
                 object obj = ResourceManager.GetObject("81d7d0d4ce05fddbc80ffa7b30a7fffe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ambient_game_67014 {
-            get {
-                return ResourceManager.GetStream("ambient_game_67014", resourceCulture);
             }
         }
         
@@ -176,6 +157,15 @@ namespace Snake.Properties {
             get {
                 object obj = ResourceManager.GetObject("body_vertical", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream GameOver {
+            get {
+                return ResourceManager.GetStream("GameOver", resourceCulture);
             }
         }
         

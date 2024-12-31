@@ -23,7 +23,7 @@ namespace Snake
             
             this.taiKhoanTableAdapter.Fill(this.database1DataSet.TaiKhoan);
             // TODO: This line of code loads data into the 'database1DataSet.TaiKhoan' table. You can move, or remove it, as needed.
-            string query = "SELECT * FROM TaiKhoan" ; // Truy vấn bảng dữ liệu Ranking
+            string query = "SELECT * FROM TaiKhoan ORDER BY HardPoint DESC, EasyPoint DESC" ; // Truy vấn bảng dữ liệu Ranking
             Modify modify = new Modify();
 
             try

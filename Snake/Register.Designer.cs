@@ -51,7 +51,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(27, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 41);
+            this.label1.Size = new System.Drawing.Size(206, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Get started";
             // 
@@ -71,8 +71,9 @@
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(34, 138);
+            this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(296, 23);
+            this.txtUser.Size = new System.Drawing.Size(296, 26);
             this.txtUser.TabIndex = 2;
             // 
             // label3
@@ -112,7 +113,7 @@
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.checkBox1.Location = new System.Drawing.Point(173, 422);
+            this.checkBox1.Location = new System.Drawing.Point(189, 432);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(180, 25);
             this.checkBox1.TabIndex = 7;
@@ -187,9 +188,10 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(34, 220);
+            this.txtEmail.Location = new System.Drawing.Point(34, 221);
+            this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(296, 23);
+            this.txtEmail.Size = new System.Drawing.Size(296, 26);
             this.txtEmail.TabIndex = 3;
             // 
             // label7
